@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            font-family: sans-serif;
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .alert{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            border: 1px solid black;
+
+            width: 350px;
+            height: 350px;
+
+            opacity: 0; /* Ele se "esconde" no site, ficando transparente */
+            
+            transition-property: height, opacity; /* faz com que a alteração de valor da propriedade, será mais gradual */
+            transition-duration: 0.5s;
+            
+        }
+
+        .alert h1{
+            font-size: 60px;
+            margin: 0 0 5px 0;
+            color: rgba(255, 0, 0, 0.534);
+        }
+        .alert p{
+            font-size: 30px;
+           color: rgba(170, 170, 80, 0.856);
+        }
+        
+        .mostrar{
+            height: 350px;
+            opacity: 1;
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="alert">
+        <h1>Aviso</h1>
+        <p>Você foi avisado...</p>
+
+
+    </div>
+
+    <button id="toggle">Mostrar/esconder</button>
+
+    <script src="js-dom-real.js"></script>
+</body>
+
+</html>
