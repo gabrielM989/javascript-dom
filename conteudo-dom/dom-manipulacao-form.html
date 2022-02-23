@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com DOM</title>
+</head>
+
+<style>
+    *{
+        font-family: sans-serif;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: rgba(128, 128, 128, 0.185);
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 7px solid rgb(142, 142, 177);
+        min-height: 300px; /* min-height --> permite informar que o elemento precisa ter uma altura mínima, para existir */
+        min-width: 300px;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    .form-block{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-block label{
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+    
+    .styled-input{
+        border: none;
+        height: 25px;
+        border-radius: 6px;
+        padding: 0 10px;
+        outline: none;
+    }
+    .btn{
+        height: 30px;
+        border: none;
+        border-radius: 6px;
+        background-color: rgb(155, 155, 194);
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .btn:hover{
+        background-color: rgba(87, 87, 202, 0.719);
+    }
+
+    .form-block + .btn{
+        margin-top: 10px;
+    }
+
+</style>
+
+<body>
+
+    <form action="" id="main-form">
+
+        <div class="form-block">
+            <label for="username">Username: </label>
+            <input type="text" id="username" placeholder="Username" class="styled-input">
+        </div>
+
+        <div class="form-block">
+
+            <label for="email">E-mail: </label>
+            <input type="email" id="email"  class="styled-input" placeholder="Digite o seu e-mail">
+
+        </div>
+
+        <div class="form-block">
+
+            <label for="pass1">Senha: </label>
+            <input type="password" id="pass1"  class="styled-input" placeholder="Digite a sua senha">
+
+        </div>
+
+        <div class="form-block">
+
+            <label for="pass2">Confirme a senha: </label>
+            <input type="password" id="pass2"  class="styled-input" placeholder="Confirme a sua senha"> 
+        </div>
+
+        <button type="submit" class="btn">Cadastrar</button>
+
+    </form>
+    <script src="js-dom-manipulacao-form.js" ></script>
+
+</body>
+
+</html>
